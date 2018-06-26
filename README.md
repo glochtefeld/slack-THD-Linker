@@ -15,14 +15,14 @@ This project is written in Python 3.x.
 This project has a few packages installed. To follow best practices, the first step should be to install a virtual environment in python. Navigate to the working directory where you have these project files, and run the following commands:
 
 ```
-python3 -m venv .
-. bin/activate
+$python3 -m venv .
+$. bin/activate
 ```
 
 If you're using Windows, you might not have to specify using Python 3.x. In that case, run the following commands:
 ```
-python -m venv .
-Scripts\activate.bin
+>python -m venv .
+>Scripts\activate.bin
 ```
 
 You can read the official documentation for Venv in [the official Python Docs](https://docs.python.org/3/library/venv.html).
