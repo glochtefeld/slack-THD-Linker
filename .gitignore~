@@ -1,7 +1,0 @@
-# Ignore following
-
-bin/*
-lib/*
-.DS_Store
-pip-selfcheck.json
-pyvenv.cfg
