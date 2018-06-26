@@ -63,7 +63,7 @@ def hello_there():
 
 @app.route('/authorize')
 def redir():
-    return redirect('https://slack.com/oauth/authorize?client_id=375533386721.377769613264&scope=commands', code=302)
+    return redirect('https://slack.com/oauth/authorize?client_id='+ os.environ['CLIENT_ID']+'&scope=commands', code=302)
 
 @app.route('/oauth/authorized', methods=['GET', 'POST'])
 def calledBack():
