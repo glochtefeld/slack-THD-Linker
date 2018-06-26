@@ -45,7 +45,7 @@ def privacy():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',cli_id = os.environ['CLIENT_ID'])
 
 @app.route('/support')
 def support():
