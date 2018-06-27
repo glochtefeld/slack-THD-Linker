@@ -24,7 +24,7 @@ python3 -m venv .
 If you're using Windows, you might not have to specify using Python 3.x. In that case, run the following commands:
 ```
 python -m venv .
-Scripts\activate.bin
+Scripts\activate.bat
 ```
 
 You can read the official documentation for Venv in [the official Python Docs](https://docs.python.org/3/library/venv.html).
@@ -49,12 +49,14 @@ Will return a small explanation of what the command does.
 /ticket 12345
 /ticket text 12345 more text
 ```
-This will return a link that looks like this: help.luther.edu/adminui?ticket=12345
+This will return a link that looks like this: *help.luther.edu/adminui?ticket=12345*
+
 Currently, the ticket number must be enclosed in spaces, otherwise the link will be formatted incorrectly. As an example,
 ```
 /ticket here are some words12345more words
 ```
-will spit out the following url: help.luther.edu/adminui?ticket=words12345more
+will spit out the following url: *help.luther.edu/adminui?ticket=words12345more*
+
 This issue is planned to be fixed at a later time.
 
 ## Deployment
