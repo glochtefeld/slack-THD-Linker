@@ -27,14 +27,14 @@ def is_request_valid(request):
 def parse(txt):
     # if the only text is help, will return a string.
     if txt == "help":
-        buildStr = "This will return a completed link to that ticket in KBOX. Neat, huh?"
-        return buildStr
+        build_str = "This will return a completed link to that ticket in KBOX. Neat, huh?"
+        return build_str
     txt = txt.split()
-    buildStr = ""
+    build_str = ""
     for word in txt:
         if re.search(".*\d{5,7}",word):
-            buildStr = "<https://help.luther.edu/adminui/ticket.php?ID=" + word + '>'
-            return buildStr
+            build_str = "<https://help.luther.edu/adminui/ticket.php?ID=" + word + '>'
+            return build_str
 
 ###############
 ## Web pages ##
@@ -58,9 +58,9 @@ def hello_there():
     if not is_request_valid(request):
         abort(400)
     text = request.form.get('text')
-    resText = parse(text)
+    res_text = parse(text)
     # Returned link is pasted into the channel.
-    return jsonify({'response_type':'in_channel','text':resText})
+    return jsonify({'response_type':'in_channel','text':res_text})
 
 # Redirection to slack Oauth
 @app.route('/authorize')
@@ -69,7 +69,7 @@ def redir():
 
 # Callback URL; returns whether or not app was successfully added. 
 @app.route('/oauth/authorized', methods=['GET', 'POST'])
-def calledBack():
+def called_back():
     a_code = request.args['code']
     sc = SlackClient("")
 
