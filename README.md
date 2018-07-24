@@ -1,5 +1,5 @@
 # slack-THD-Linker
-##### version 1.0.0
+##### version 1.0.2
 This is a slack app built for the Luther Technology Help Desk in order to increase productivity and ease of use when discussing internal matters.
 
 ## Getting Started
