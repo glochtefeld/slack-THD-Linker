@@ -27,13 +27,13 @@ def is_request_valid(request):
 def parse(txt):
     # if the only text is help, will return a string.
     if txt == "help":
-        build_str = "This will return a completed link to that ticket in KBOX. Neat, huh?"
+        build_str = "This will return a completed link. Neat, huh?"
         return build_str
     txt = txt.split()
     build_str = ""
     for word in txt:
         if re.search(".*\d{5,7}",word):
-            build_str = "<https://help.luther.edu/adminui/ticket.php?ID=" + word + '>'
+            build_str = "<https://example.com | " + word + '>'
             return build_str
 
 ###############
