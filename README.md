@@ -1,6 +1,6 @@
 # slack-THD-Linker
 ##### version 1.0.2
-This is a slack app built for the Luther Technology Help Desk in order to increase productivity and ease of use when discussing internal matters.
+This is a slack app built in order to increase productivity and ease of use when discussing internal matters by formatting ticket numbers into links.
 
 ## Getting Started
 
@@ -44,18 +44,18 @@ pip install --user -r requirements.txt
 ```
 Will return a small explanation of what the command does.
 
-* Invoking the /ticket command in any slack chat window will automatically link the ticket number in the message to help.luther.edu. In the examples below, the ticket should be formatted as just the ticket number without the \# symbol, like so:
+* Invoking the /ticket command in any slack chat window will automatically link the ticket number in the message to whatever site you specify. In the examples below, the ticket should be formatted as just the ticket number without the \# symbol, like so:
 ```
 /ticket 12345
 /ticket text 12345 more text
 ```
-This will return a link that looks like this: *help.luther.edu/adminui?ticket=12345*
+This will return a link that looks like this: *12345* and is formatted to hide the true url.
 
 Currently, the ticket number must be enclosed in spaces, otherwise the link will be formatted incorrectly. As an example,
 ```
 /ticket here are some words12345more words
 ```
-will spit out the following url: *help.luther.edu/adminui?ticket=words12345more*
+will spit out the following url: *words12345more*
 
 This issue is planned to be fixed at a later time.
 
@@ -84,8 +84,4 @@ I use [SemVer](http://semver.org/) for versioning.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-* Special thanks to my managers for letting me work on this FOSS project instead of paying attention to tickets.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. All identifying information regarding internal links has been scrubbed.
